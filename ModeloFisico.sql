@@ -42,7 +42,8 @@ CREATE TABLE EscritorioApoio (
 
 CREATE TABLE Sen_Telefone (
 	Sen INT,
-    Telefone VARCHAR(15)
+    Telefone VARCHAR(15),
+    PRIMARY KEY (Sen,Telefone)
 );
 
 CREATE TABLE Localizacao (
