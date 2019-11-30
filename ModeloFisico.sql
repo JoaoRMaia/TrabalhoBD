@@ -1,113 +1,109 @@
-DROP DATABASE Trab;
-CREATE DATABASE Trab;
-USE Trab;
+/* ModeloLogico: */
 
--- feito
 CREATE TABLE Senador (
-	ID INT AUTO_INCREMENT PRIMARY KEY,
-    Nome VARCHAR(100),
-    Partido VARCHAR(20),
-    UF CHAR(2),
-    Titularidade VARCHAR(100),
-    Mandato VARCHAR(20),
-    DtNasc CHAR(10),
-    Email VARCHAR(100),
-    fk_Placa CHAR(7)
+    Nome varchar(100) PRIMARY KEY,
+    Partido varchar(20),
+    UF char(2),
+    Titularidade varchar(100),
+    Mandato DATE,
+    fk_Telefone_Telefone_PK INT,
+    DtNasc DATE,
+    Email varchar(100),
+    fk_Carro_Executivo_Placa char(7)
 );
 
--- insert into Beneficio (valor, tipo, descricao) values ('')
 CREATE TABLE Beneficio (
-    Valor NUMERIC(10,2),
-    Tipo VARCHAR(30),
-    Descricao VARCHAR(500),
-    Id INT AUTO_INCREMENT PRIMARY KEY
+    Valor numeric(10,2),
+    Tipo varchar(30),
+    Descricao varchar(30),
+    Id INT PRIMARY KEY,
+    fk_Carro_Executivo_Placa char(7),
+    Gasto numeric(10,2)
 );
 
--- Feito
 CREATE TABLE Carro_Executivo (
-    Placa CHAR(7) PRIMARY KEY,
-    Modelo VARCHAR(30),
-    Vinculo VARCHAR(10),
-    TipoCombustivel VARCHAR(100),
-    KmRodados INT,
-    LitrosGastos NUMERIC(5,2),
-    Condutor VARCHAR(100)
+    Placa char(7) PRIMARY KEY,
+    Modelo varchar(30),
+    Vinculo varchar(30),
+    TipoCombustivel varchar(100),
+    KmRodados numeric(5,2),
+    LitrosGastos numeric(5,2),
+    Condutor varchar(100)
 );
 
--- Feito
 CREATE TABLE EscritorioApoio (
-    Setor VARCHAR(200) PRIMARY KEY,
-    Endereco VARCHAR(200),
-    Telefone VARCHAR(15),
-    Fax VARCHAR(15),
-    Estado CHAR(2),
-    fk_Sen_ID INT
+    Setor varchar(200) PRIMARY KEY,
+    Endereco varchar(200),
+    Telefone varchar(15),
+    Fax varchar(15),
+    Estado char(2),
+    fk_Gabinete_Senador_Nome varchar(100)
 );
 
--- Feito
-CREATE TABLE Sen_Telefone (
-	Sen INT,
-    Telefone VARCHAR(15)
+CREATE TABLE Telefone (
+    Telefone_PK INT NOT NULL PRIMARY KEY,
+    Telefone varchar(15)
 );
 
--- Feito
 CREATE TABLE Localizacao (
-    Localizacao_PK INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    Localizacao_PK INT NOT NULL PRIMARY KEY,
     Endereco VARCHAR(200),
     Complemento VARCHAR(200)
 );
 
 CREATE TABLE Recebe (
-    fk_Sen_ID INT,
+    fk_Gabinete_Senador_Nome varchar(100),
     fk_Beneficio_Id INT
 );
 
--- Feito
 CREATE TABLE Gabinete (
-    Chefe_de_Gabinete VARCHAR(100),
-    fk_Localizacao INT,
+    Chefe de Gabinete varchar(100),
+    fk_Localizacao varchar(20),
     Descricao VARCHAR(200),
-    Sen_ID INT,
-    PRIMARY KEY (Chefe_de_Gabinete, Sen_ID)
+    Senador varchar(100),
+    PRIMARY KEY (Chefe de Gabinete, Senador)
 );
 
--- Feito
 CREATE TABLE CEAPS (
-	ID INT AUTO_INCREMENT PRIMARY KEY,
-    Documento VARCHAR(40),
+    Documento VARCHAR(40) PRIMARY KEY,
     Mes INT,
     Tipo_Despesa VARCHAR(200),
-    CNPJ_CPF VARCHAR(20),
+    CNPJ_CPF VARCHAR(,
     Fornecedor VARCHAR(200),
-    Data char(10),
+    Data DATE,
     Ano INT,
-    Detalhamento VARCHAR(1000),
-    Reembolso NUMERIC(10,2),
-    Sen_ID INT
+    Detalhamento VARCHAR(200),
+    Reembolso numeric(10,2),
+    fk_Senador varchar(100)
 );
  
-ALTER TABLE Gabinete ADD CONSTRAINT FK_Gabinete_2
-    FOREIGN KEY (fk_Localizacao)
+ALTER TABLE Senador ADD CONSTRAINT FK_Senador_2
+    FOREIGN KEY (fk_Localizacao_Localizacao_PK)
     REFERENCES Localizacao (Localizacao_PK)
     ON DELETE SET NULL;
  
-ALTER TABLE Sen_Telefone ADD CONSTRAINT FK_Senador_3
-    FOREIGN KEY (Sen)
-    REFERENCES Senador (ID);
+ALTER TABLE Senador ADD CONSTRAINT FK_Senador_3
+    FOREIGN KEY (fk_Telefone_Telefone_PK)
+    REFERENCES Telefone (Telefone_PK);
  
 ALTER TABLE Senador ADD CONSTRAINT FK_Senador_4
-    FOREIGN KEY (fk_Placa)
+    FOREIGN KEY (fk_Carro_Executivo_Placa)
+    REFERENCES Carro_Executivo (Placa)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE Beneficio ADD CONSTRAINT FK_Beneficio_2
+    FOREIGN KEY (fk_Carro_Executivo_Placa)
     REFERENCES Carro_Executivo (Placa)
     ON DELETE CASCADE;
  
 ALTER TABLE EscritorioApoio ADD CONSTRAINT FK_EscritorioApoio_2
-    FOREIGN KEY (fk_Sen_ID)
-    REFERENCES Senador (ID)
+    FOREIGN KEY (fk_Gabinete_Senador_Nome)
+    REFERENCES Senador (Nome)
     ON DELETE CASCADE;
  
 ALTER TABLE Recebe ADD CONSTRAINT FK_Recebe_1
-    FOREIGN KEY (fk_Sen_ID)
-    REFERENCES Senador (ID)
+    FOREIGN KEY (fk_Gabinete_Senador_Nome)
+    REFERENCES Senador (Nome)
     ON DELETE SET NULL;
  
 ALTER TABLE Recebe ADD CONSTRAINT FK_Recebe_2
@@ -115,10 +111,10 @@ ALTER TABLE Recebe ADD CONSTRAINT FK_Recebe_2
     REFERENCES Beneficio (Id)
     ON DELETE SET NULL;
  
-ALTER TABLE Gabinete ADD CONSTRAINT FK_Gabinete_3
-    FOREIGN KEY (Sen_ID)
-    REFERENCES Senador (ID);
+ALTER TABLE Gabinete ADD CONSTRAINT FK_Gabinete_2
+    FOREIGN KEY (Senador)
+    REFERENCES Senador (Nome);
  
 ALTER TABLE CEAPS ADD CONSTRAINT FK_CEAPS_2
-    FOREIGN KEY (Sen_ID)
-    REFERENCES Senador (ID);
+    FOREIGN KEY (fk_Senador)
+    REFERENCES Senador (Nome);
