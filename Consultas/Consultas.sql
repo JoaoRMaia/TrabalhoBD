@@ -1,4 +1,7 @@
 --  1	consulta envolvendo	apenas	as	operações	de	seleção	e	projeção
+create user 'joao'@'localhost' identified by '123';
+use Trab;
+grant all on * to 'joao';
 
 SELECT * 
 FROM EscritorioApoio 
@@ -55,10 +58,10 @@ SELECT Senador.Nome, SUM(Reembolso)
 FROM CEAPS INNER JOIN Senador ON Senador.ID = Sen_ID 
 GROUP BY Sen_ID ORDER BY SUM(Reembolso) DESC; -- Senadores que mais receberam em CEAPS
 
-SELECT COUNT(Reembolso), Nome
+SELECT COUNT(Reembolso),AVG(Reembolso), Nome
 FROM CEAPS 
 INNER JOIN Senador On Sen_ID = Senador.ID 
-GROUP BY Sen_ID ORDER BY COUNT(Reembolso) DESC; -- Senadores que mais tiveram CEAPS
+GROUP BY Sen_ID ORDER BY COUNT(Reembolso) DESC; -- Senadores que mais tiveram CEAPS e o valor Médio delas
 
 SELECT SUM(Valor) AS Total
 FROM Beneficio
