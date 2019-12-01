@@ -1,15 +1,3 @@
-SHOW TABLES;
-SELECT * FROM beneficio;
-SELECT * FROM carro_executivo;
-SELECT * FROM escritorioapoio;
-SELECT * FROM gabinete;
-SELECT * FROM localizacao;
-SELECT * FROM recebe;
-SELECT * FROM sen_telefone;
-SELECT * FROM senador;
-SELECT * FROM ceaps;
-
-
 --  1	consulta envolvendo	apenas	as	operações	de	seleção	e	projeção
 
 SELECT * 
@@ -48,11 +36,11 @@ FROM CEAPS
 INNER JOIN Senador ON Senador.ID = CEAPS.Sen_ID
 WHERE Senador.ID IN 
 	(
-	(SELECT ID FROM Senador WHERE Partido = 'PT')
+	SELECT ID FROM Senador WHERE Partido = 'PT'
     UNION
-    (SELECT ID FROM Senador WHERE Partido = 'PSL') 
+    SELECT ID FROM Senador WHERE Partido = 'PSL'
     UNION
-    (SELECT ID FROM Senador WHERE Partido = 'PSDB')
+    SELECT ID FROM Senador WHERE Partido = 'PSDB'
     )
 GROUP BY Partido;
 

@@ -1,4 +1,3 @@
-DROP DATABASE Trab;
 CREATE DATABASE Trab;
 USE Trab;
 
