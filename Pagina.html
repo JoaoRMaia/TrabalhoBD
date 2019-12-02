@@ -1,0 +1,1186 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+   
+    <title>Trab BD</title>
+</head>
+<style>
+    .table-wrapper {
+        margin-top: 50px;
+    }
+
+    .player-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .add-player-form {
+        margin-top: 50px;
+    }
+</style>
+<body>
+<div class="page-wrapper">
+
+	<div class="container">
+		<div class="table-wrapper">
+				<table class="table table-hovered">
+					<thead class="thead-dark">
+						<tr>
+							<th scope="col">ID</th>
+							<th scope="col">Nome</th>
+							<th scope="col">Partido</th>
+							<th scope="col">UF</th>
+							<th scope="col">Titularidade</th>
+							<th scope="col">Email</th>
+							<th scope="col">DtNasc</th>
+						</tr>
+					</thead>
+					<tbody>
+						
+							<tr>
+								<td>1</td>
+								<td>ACIR GURGACZ</td>
+								<td>PDT</td>
+								<td>RO</td>
+								<td>Titular</td>
+								<td>sen.acirgurgacz@senado.leg.br</td>
+								<td>25/02/1962</td>
+							</tr>
+						
+							<tr>
+								<td>2</td>
+								<td>ALESSANDRO VIEIRA</td>
+								<td>CIDADANIA</td>
+								<td>SE</td>
+								<td>Titular</td>
+								<td>sen.alessandrovieira@senado.leg.br</td>
+								<td>03/04/1975</td>
+							</tr>
+						
+							<tr>
+								<td>3</td>
+								<td>ALVARO DIAS</td>
+								<td>PODEMOS</td>
+								<td>PR</td>
+								<td>Titular</td>
+								<td>sen.alvarodias@senado.leg.br</td>
+								<td>07/12/1944</td>
+							</tr>
+						
+							<tr>
+								<td>4</td>
+								<td>ANGELO CORONEL</td>
+								<td>PSD</td>
+								<td>BA</td>
+								<td>Titular</td>
+								<td>sen.angelocoronel@senado.leg.br</td>
+								<td>03/05/1958</td>
+							</tr>
+						
+							<tr>
+								<td>5</td>
+								<td>ANTONIO ANASTASIA</td>
+								<td>PSDB</td>
+								<td>MG</td>
+								<td>Titular</td>
+								<td>sen.antonioanastasia@senado.leg.br</td>
+								<td>09/05/1961</td>
+							</tr>
+						
+							<tr>
+								<td>6</td>
+								<td>AROLDE DE OLIVEIRA</td>
+								<td>PSD</td>
+								<td>RJ</td>
+								<td>Titular</td>
+								<td>sen.aroldedeoliveira@senado.leg.br</td>
+								<td>11/03/1937</td>
+							</tr>
+						
+							<tr>
+								<td>7</td>
+								<td>CARLOS VIANA</td>
+								<td>PSD</td>
+								<td>MG</td>
+								<td>Titular</td>
+								<td>sen.carlosviana@senado.leg.br</td>
+								<td>22/03/1963</td>
+							</tr>
+						
+							<tr>
+								<td>8</td>
+								<td>CHICO RODRIGUES</td>
+								<td>DEM</td>
+								<td>RR</td>
+								<td>Titular</td>
+								<td>sen.chicorodrigues@senado.leg.br</td>
+								<td>23/04/1951</td>
+							</tr>
+						
+							<tr>
+								<td>9</td>
+								<td>CID GOMES</td>
+								<td>PDT</td>
+								<td>CE</td>
+								<td>Titular</td>
+								<td>sen.cidgomes@senado.leg.br</td>
+								<td>27/04/1963</td>
+							</tr>
+						
+							<tr>
+								<td>10</td>
+								<td>CIRO NOGUEIRA</td>
+								<td>PP</td>
+								<td>PI</td>
+								<td>Titular</td>
+								<td>sen.cironogueira@senado.leg.br</td>
+								<td>21/11/1968</td>
+							</tr>
+						
+							<tr>
+								<td>11</td>
+								<td>CONFUCIO MOURA</td>
+								<td>MDB</td>
+								<td>RO</td>
+								<td>Titular</td>
+								<td>sen.confuciomoura@senado.leg.br</td>
+								<td>16/05/1948</td>
+							</tr>
+						
+							<tr>
+								<td>12</td>
+								<td>DANIELLA RIBEIRO</td>
+								<td>PP</td>
+								<td>PB</td>
+								<td>Titular</td>
+								<td>sen.daniellaribeiro@senado.leg.br</td>
+								<td>26/03/1972</td>
+							</tr>
+						
+							<tr>
+								<td>13</td>
+								<td>DARIO BERGER</td>
+								<td>MDB</td>
+								<td>SC</td>
+								<td>Titular</td>
+								<td>sen.darioberger@senado.leg.br</td>
+								<td>07/12/1956</td>
+							</tr>
+						
+							<tr>
+								<td>14</td>
+								<td>DAVI ACOLUMBRE</td>
+								<td>DEM</td>
+								<td>AP</td>
+								<td>Titular</td>
+								<td>sen.davialcolumbre@senado.leg.br</td>
+								<td>19/06/1977</td>
+							</tr>
+						
+							<tr>
+								<td>15</td>
+								<td>EDUARDO BRAGA</td>
+								<td>MDB</td>
+								<td>AM</td>
+								<td>Titular</td>
+								<td>sen.eduardobraga@senado.leg.br</td>
+								<td>06/12/1960</td>
+							</tr>
+						
+							<tr>
+								<td>16</td>
+								<td>EDUARDO GIRÃO</td>
+								<td>PODEMOS</td>
+								<td>CE</td>
+								<td>Titular</td>
+								<td>sen.eduardogirao@senado.leg.br</td>
+								<td>25/09/1972</td>
+							</tr>
+						
+							<tr>
+								<td>17</td>
+								<td>EDUARDO GOMES</td>
+								<td>MDB</td>
+								<td>TO</td>
+								<td>Titular</td>
+								<td>sen.eduardogomes@senado.leg.br</td>
+								<td>28/04/1966</td>
+							</tr>
+						
+							<tr>
+								<td>18</td>
+								<td>ELIZIANE GAMA</td>
+								<td>CIDADANIA</td>
+								<td>MA</td>
+								<td>Titular</td>
+								<td>sen.elizianegama@senado.leg.br</td>
+								<td>27/02/1977</td>
+							</tr>
+						
+							<tr>
+								<td>19</td>
+								<td>ELMANO FERRER</td>
+								<td>PODEMOS</td>
+								<td>PI</td>
+								<td>Titular</td>
+								<td>sen.elmanoferrer@senado.leg.br</td>
+								<td>01/08/1942</td>
+							</tr>
+						
+							<tr>
+								<td>20</td>
+								<td>ESPERIDIÃO AMIN</td>
+								<td>PP</td>
+								<td>SC</td>
+								<td>Titular</td>
+								<td>sen.esperidiaoamin@senado.leg.br</td>
+								<td>21/12/1947</td>
+							</tr>
+						
+							<tr>
+								<td>21</td>
+								<td>FABIANO CONTARATO</td>
+								<td>REDE</td>
+								<td>ES</td>
+								<td>Titular</td>
+								<td>sen.fabianocontarato@senado.leg.br</td>
+								<td>20/06/1966</td>
+							</tr>
+						
+							<tr>
+								<td>22</td>
+								<td>FERNANDO BEZERRA</td>
+								<td>MDB</td>
+								<td>PE</td>
+								<td>Titular</td>
+								<td>sen.fernandobezerracoelho@senado.leg.br</td>
+								<td>07/12/1957</td>
+							</tr>
+						
+							<tr>
+								<td>23</td>
+								<td>FERNANDO COLLOR</td>
+								<td>PROS</td>
+								<td>AL</td>
+								<td>Titular</td>
+								<td>Sen.fernandocollor@senado.leg.br</td>
+								<td>12/08/1949</td>
+							</tr>
+						
+							<tr>
+								<td>24</td>
+								<td>FLÁVIO ARNS</td>
+								<td>REDE</td>
+								<td>PR</td>
+								<td>Titular</td>
+								<td>sen.flavioarns@senado.leg.br</td>
+								<td>09/11/1950</td>
+							</tr>
+						
+							<tr>
+								<td>25</td>
+								<td>FLÁVIO BOLSONARO</td>
+								<td>PSL</td>
+								<td>RJ</td>
+								<td>Titular</td>
+								<td>sen.flaviobolsonaro@senado.leg.br</td>
+								<td>30/04/1981</td>
+							</tr>
+						
+							<tr>
+								<td>26</td>
+								<td>HUMBERTO COSTA</td>
+								<td>PT</td>
+								<td>PE</td>
+								<td>Titular</td>
+								<td>sen.humbertocosta@senado.leg.br</td>
+								<td>07/07/1957</td>
+							</tr>
+						
+							<tr>
+								<td>27</td>
+								<td>IRAJÁ ABREU</td>
+								<td>PSD</td>
+								<td>TO</td>
+								<td>Titular</td>
+								<td>sen.iraja@senado.leg.br</td>
+								<td>03/02/1983</td>
+							</tr>
+						
+							<tr>
+								<td>28</td>
+								<td>IZALCI LUCAS</td>
+								<td>PSDB</td>
+								<td>DF</td>
+								<td>Titular</td>
+								<td>sen.izalcilucas@senado.leg.br</td>
+								<td>07/04/1956</td>
+							</tr>
+						
+							<tr>
+								<td>29</td>
+								<td>JADER BARBALHO</td>
+								<td>MDB</td>
+								<td>PA</td>
+								<td>Titular</td>
+								<td>sen.jaderbarbalho@senado.leg.br</td>
+								<td>27/10/1944</td>
+							</tr>
+						
+							<tr>
+								<td>30</td>
+								<td>JAQUES WAGNER</td>
+								<td>PT</td>
+								<td>BA</td>
+								<td>Titular</td>
+								<td>sen.jaqueswagner@senado.leg.br</td>
+								<td>16/03/1951</td>
+							</tr>
+						
+							<tr>
+								<td>31</td>
+								<td>JARBAS VASCONCELOS</td>
+								<td>MDB</td>
+								<td>PE</td>
+								<td>Titular</td>
+								<td>sen.jarbasvasconcelos@senado.leg.br</td>
+								<td>23/08/1942</td>
+							</tr>
+						
+							<tr>
+								<td>32</td>
+								<td>JAYME CAMPOS</td>
+								<td>DEM</td>
+								<td>MT</td>
+								<td>Titular</td>
+								<td>Sen.JaymeCampos@senado.leg.br</td>
+								<td>13/09/1951</td>
+							</tr>
+						
+							<tr>
+								<td>33</td>
+								<td>JEAN PAUL PRATES</td>
+								<td>PT</td>
+								<td>RN</td>
+								<td>1º Suplente</td>
+								<td>sen.jeanpaulprates@senado.leg.br</td>
+								<td>19/06/1968</td>
+							</tr>
+						
+							<tr>
+								<td>34</td>
+								<td>JORGE KAJURU</td>
+								<td>CIDADANIA</td>
+								<td>GO</td>
+								<td>Titular</td>
+								<td>sen.jorgekajuru@senado.leg.br</td>
+								<td>20/01/1961</td>
+							</tr>
+						
+							<tr>
+								<td>35</td>
+								<td>JORGINHO MELLO</td>
+								<td>PL</td>
+								<td>SC</td>
+								<td>Titular</td>
+								<td>sen.jorginhomello@senado.leg.br</td>
+								<td>15/07/1956</td>
+							</tr>
+						
+							<tr>
+								<td>36</td>
+								<td>JOSÉ MARANHÃO</td>
+								<td>MDB</td>
+								<td>PB</td>
+								<td>Titular</td>
+								<td>sen.josemaranhao@senado.leg.br</td>
+								<td>06/09/1933</td>
+							</tr>
+						
+							<tr>
+								<td>37</td>
+								<td>JOSÉ SERRA</td>
+								<td>PSDB</td>
+								<td>SP</td>
+								<td>Titular</td>
+								<td>sen.joseserra@senado.leg.br</td>
+								<td>19/03/1942</td>
+							</tr>
+						
+							<tr>
+								<td>38</td>
+								<td>SELMA ARRUDA</td>
+								<td>PODEMOS</td>
+								<td>MT</td>
+								<td>Titular</td>
+								<td>sen.selmaarruda@senado.leg.br</td>
+								<td>20/01/1963</td>
+							</tr>
+						
+							<tr>
+								<td>39</td>
+								<td>KÁTIA ABREU</td>
+								<td>PDT</td>
+								<td>TO</td>
+								<td>Titular</td>
+								<td>sen.katiaabreu@senado.leg.br</td>
+								<td>02/02/1962</td>
+							</tr>
+						
+							<tr>
+								<td>40</td>
+								<td>LASIER MARTINS</td>
+								<td>PODEMOS</td>
+								<td>RS</td>
+								<td>Titular</td>
+								<td>sen.lasiermartins@senado.leg.br</td>
+								<td>14/04/1942</td>
+							</tr>
+						
+							<tr>
+								<td>41</td>
+								<td>LEILA BARROS</td>
+								<td>PSB</td>
+								<td>DF</td>
+								<td>Titular</td>
+								<td>sen.leilabarros@senado.leg.br</td>
+								<td>30/09/1971</td>
+							</tr>
+						
+							<tr>
+								<td>42</td>
+								<td>LUCAS BARRETO</td>
+								<td>PSD</td>
+								<td>AP</td>
+								<td>Titular</td>
+								<td>sen.lucasbarreto@senado.leg.br</td>
+								<td>10/11/1964</td>
+							</tr>
+						
+							<tr>
+								<td>43</td>
+								<td>LUIZ CARLOS HEINZE</td>
+								<td>PP</td>
+								<td>RS</td>
+								<td>Titular</td>
+								<td>sen.luiscarlosheinze@senado.leg.br</td>
+								<td>14/09/1950</td>
+							</tr>
+						
+							<tr>
+								<td>44</td>
+								<td>LUIZ CARLOS DO CARMO</td>
+								<td>MDB</td>
+								<td>GO</td>
+								<td>1º Suplente</td>
+								<td>sen.luizcarlosdocarmo@senado.leg.br</td>
+								<td>02/04/1958</td>
+							</tr>
+						
+							<tr>
+								<td>45</td>
+								<td>MAILZA GOMES</td>
+								<td>PP</td>
+								<td>AC</td>
+								<td>1º Suplente</td>
+								<td>sen.mailzagomes@senado.leg.br</td>
+								<td>10/12/1976</td>
+							</tr>
+						
+							<tr>
+								<td>46</td>
+								<td>MAJOR OLÍMPIO</td>
+								<td>PSL</td>
+								<td>SP</td>
+								<td>Titular</td>
+								<td>sen.majorolimpio@senado.leg.br</td>
+								<td>20/03/1962</td>
+							</tr>
+						
+							<tr>
+								<td>47</td>
+								<td>MARA GABRILLI</td>
+								<td>PSDB</td>
+								<td>SP</td>
+								<td>Titular</td>
+								<td>sen.maragabrilli@senado.leg.br</td>
+								<td>28/09/1967</td>
+							</tr>
+						
+							<tr>
+								<td>48</td>
+								<td>MARCELO CASTRO</td>
+								<td>MDB</td>
+								<td>PI</td>
+								<td>Titular</td>
+								<td>sen.marcelocastro@senado.leg.br</td>
+								<td>09/06/1950</td>
+							</tr>
+						
+							<tr>
+								<td>49</td>
+								<td>MÁRCIO BITTAR</td>
+								<td>MDB</td>
+								<td>AC</td>
+								<td>Titular</td>
+								<td>sen.marciobittar@senado.leg.br</td>
+								<td>28/06/1963</td>
+							</tr>
+						
+							<tr>
+								<td>50</td>
+								<td>MARCOS DO VAL</td>
+								<td>PODEMOS</td>
+								<td>ES</td>
+								<td>Titular</td>
+								<td>sen.marcosdoval@senado.leg.br</td>
+								<td>15/06/1971</td>
+							</tr>
+						
+							<tr>
+								<td>51</td>
+								<td>MARCOS ROGÉRIO</td>
+								<td>DEM</td>
+								<td>RO</td>
+								<td>Titular</td>
+								<td>sen.marcosrogerio@senado.leg.br</td>
+								<td>07/07/1978</td>
+							</tr>
+						
+							<tr>
+								<td>52</td>
+								<td>MARIA DO CARMO ALVES</td>
+								<td>DEM</td>
+								<td>SE</td>
+								<td>Titular</td>
+								<td>sen.mariadocarmoalves@senado.leg.br</td>
+								<td>23/08/1941</td>
+							</tr>
+						
+							<tr>
+								<td>53</td>
+								<td>MECIAS JESUS</td>
+								<td>REPUBLICANOS</td>
+								<td>RR</td>
+								<td>Titular</td>
+								<td>sen.meciasdejesus@senado.leg.br</td>
+								<td>08/02/1962</td>
+							</tr>
+						
+							<tr>
+								<td>54</td>
+								<td>NELSON TRAD</td>
+								<td>PSD</td>
+								<td>MS</td>
+								<td>Titular</td>
+								<td>sen.nelsinhotrad@senado.leg.br</td>
+								<td>05/09/1961</td>
+							</tr>
+						
+							<tr>
+								<td>55</td>
+								<td>OMAR AZIZ</td>
+								<td>PSD</td>
+								<td>AM</td>
+								<td>Titular</td>
+								<td>sen.omaraziz@senado.leg.br</td>
+								<td>13/08/1958</td>
+							</tr>
+						
+							<tr>
+								<td>56</td>
+								<td>ORIOVISTO GUIMARÃES</td>
+								<td>PODEMOS</td>
+								<td>PR</td>
+								<td>Titular</td>
+								<td>sen.oriovistoguimaraes@senado.leg.br</td>
+								<td>12/08/1945</td>
+							</tr>
+						
+							<tr>
+								<td>57</td>
+								<td>OTTO ALENCAR</td>
+								<td>PSD</td>
+								<td>BA</td>
+								<td>Titular</td>
+								<td>sen.ottoalencar@senado.leg.br</td>
+								<td>28/08/1947</td>
+							</tr>
+						
+							<tr>
+								<td>58</td>
+								<td>PAULO PAIM</td>
+								<td>PT</td>
+								<td>RS</td>
+								<td>Titular</td>
+								<td>sen.paulopaim@senado.leg.br</td>
+								<td>15/03/1950</td>
+							</tr>
+						
+							<tr>
+								<td>59</td>
+								<td>PAULO ROCHA</td>
+								<td>PT</td>
+								<td>PA</td>
+								<td>Titular</td>
+								<td>sen.paulorocha@senado.leg.br</td>
+								<td>01/04/1951</td>
+							</tr>
+						
+							<tr>
+								<td>60</td>
+								<td>PLÍNIO VALÉRIO</td>
+								<td>PSDB</td>
+								<td>AM</td>
+								<td>Titular</td>
+								<td>sen.pliniovalerio@senado.leg.br</td>
+								<td>30/01/1955</td>
+							</tr>
+						
+							<tr>
+								<td>61</td>
+								<td>RANDOLFE RODRIGUES</td>
+								<td>REDE</td>
+								<td>AP</td>
+								<td>Titular</td>
+								<td>sen.randolferodrigues@senado.leg.br</td>
+								<td>06/11/1972</td>
+							</tr>
+						
+							<tr>
+								<td>62</td>
+								<td>REGUFFE</td>
+								<td>PODEMOS</td>
+								<td>DF</td>
+								<td>Titular</td>
+								<td>sen.reguffe@senado.leg.br</td>
+								<td>05/09/1972</td>
+							</tr>
+						
+							<tr>
+								<td>63</td>
+								<td>RENAN CALHEIROS</td>
+								<td>MDB</td>
+								<td>AL</td>
+								<td>Titular</td>
+								<td>sen.renancalheiros@senado.leg.br</td>
+								<td>16/09/1955</td>
+							</tr>
+						
+							<tr>
+								<td>64</td>
+								<td>ROBERTO ROCHA</td>
+								<td>PSDB</td>
+								<td>MA</td>
+								<td>Titular</td>
+								<td>sen.robertorocha@senado.leg.br</td>
+								<td>04/08/1965</td>
+							</tr>
+						
+							<tr>
+								<td>65</td>
+								<td>RODRIGO CUNHA</td>
+								<td>PSDB</td>
+								<td>AL</td>
+								<td>Titular</td>
+								<td>sen.rodrigocunha@senado.leg.br</td>
+								<td>11/05/1981</td>
+							</tr>
+						
+							<tr>
+								<td>66</td>
+								<td>RODRIGO PACHECO</td>
+								<td>DEM</td>
+								<td>MG</td>
+								<td>Titular</td>
+								<td>sen.rodrigopacheco@senado.leg.br</td>
+								<td>03/11/1976</td>
+							</tr>
+						
+							<tr>
+								<td>67</td>
+								<td>ROGÉRIO CARVALHO</td>
+								<td>PT</td>
+								<td>SE</td>
+								<td>Titular</td>
+								<td>sen.rogeriocarvalho@senado.leg.br</td>
+								<td>02/08/1968</td>
+							</tr>
+						
+							<tr>
+								<td>68</td>
+								<td>ROMARIO</td>
+								<td>PODEMOS</td>
+								<td>RJ</td>
+								<td>Titular</td>
+								<td>sen.romario@senado.leg.br</td>
+								<td>29/01/1966</td>
+							</tr>
+						
+							<tr>
+								<td>69</td>
+								<td>ROSE DE FREITAS</td>
+								<td>PODEMOS</td>
+								<td>ES</td>
+								<td>Titular</td>
+								<td>rose.freitas@Senadora.leg.br</td>
+								<td>23/01/1949</td>
+							</tr>
+						
+							<tr>
+								<td>70</td>
+								<td>SÉRGIO PETECÃO</td>
+								<td>PSD</td>
+								<td>AC</td>
+								<td>Titular</td>
+								<td>sergio.petecao@Senador.leg.br</td>
+								<td>20/04/1960</td>
+							</tr>
+						
+							<tr>
+								<td>71</td>
+								<td>SIMONE TEBET</td>
+								<td>MDB</td>
+								<td>MS</td>
+								<td>Titular</td>
+								<td>sen.simonetebet@senado.leg.br</td>
+								<td>22/02/1970</td>
+							</tr>
+						
+							<tr>
+								<td>72</td>
+								<td>SORAYA THRONICKE</td>
+								<td>PSL</td>
+								<td>MS</td>
+								<td>Titular</td>
+								<td>sen.sorayathronicke@senado.leg.br</td>
+								<td>01/06/1973</td>
+							</tr>
+						
+							<tr>
+								<td>73</td>
+								<td>STYVENSON VALENTM</td>
+								<td>PODEMOS</td>
+								<td>RN</td>
+								<td>Titular</td>
+								<td>sen.styvensonvalentim@senado.leg.br</td>
+								<td>07/02/1977</td>
+							</tr>
+						
+							<tr>
+								<td>74</td>
+								<td>TASSO JEREISSATI</td>
+								<td>PSDB</td>
+								<td>CE</td>
+								<td>Titular</td>
+								<td>sen.tassojereissati@senado.leg.br</td>
+								<td>15/12/1948</td>
+							</tr>
+						
+							<tr>
+								<td>75</td>
+								<td>TEOMÁRIO MOTA</td>
+								<td>PROS</td>
+								<td>RR</td>
+								<td>Titular</td>
+								<td>sen.telmariomota@senado.leg.br</td>
+								<td>15/02/1958</td>
+							</tr>
+						
+							<tr>
+								<td>76</td>
+								<td>VANDERLAN CARDOSO</td>
+								<td>PP</td>
+								<td>GO</td>
+								<td>Titular</td>
+								<td>sen.vanderlancardoso@senado.leg.br</td>
+								<td>15/11/1962</td>
+							</tr>
+						
+							<tr>
+								<td>77</td>
+								<td>VENEZIANO VITAL DO RÊGO</td>
+								<td>PSB</td>
+								<td>PB</td>
+								<td>Titular</td>
+								<td>sen.venezianovitaldorego@senado.leg.br</td>
+								<td>17/07/1970</td>
+							</tr>
+						
+							<tr>
+								<td>78</td>
+								<td>WELLINGTON FAGUNDES</td>
+								<td>PL</td>
+								<td>MT</td>
+								<td>Titular</td>
+								<td>sen.wellingtonfagundes@senado.leg.br</td>
+								<td>01/06/1957</td>
+							</tr>
+						
+							<tr>
+								<td>79</td>
+								<td>WEVERTON DE SOUSA</td>
+								<td>PDT</td>
+								<td>MA</td>
+								<td>Titular</td>
+								<td>sen.wevertonrocha@senado.leg.br</td>
+								<td>08/10/1979</td>
+							</tr>
+						
+							<tr>
+								<td>80</td>
+								<td>ZENAIDE MAIA</td>
+								<td>PROS</td>
+								<td>RN</td>
+								<td>Titular</td>
+								<td>sen.zenaidemaia@senado.leg.br</td>
+								<td>27/11/1954</td>
+							</tr>
+						
+							<tr>
+								<td>81</td>
+								<td>ZEQUINHA MARINHO</td>
+								<td>PSC</td>
+								<td>PA</td>
+								<td>Titular</td>
+								<td>sen.zequinhamarinho@senado.leg.br</td>
+								<td>18/09/1959</td>
+							</tr>
+						
+					</tbody>
+				</table>
+        </div>
+        <div id="teste" style="width: 500px; float: left;">
+            <h1>Gasto com Fornecedores</h1>
+            <canvas id="myChart" width="500px" height="500px"></canvas>            
+        </div>
+        <div id="teste" style="width: 500px;float: left; margin-left: 30px;">
+            <h1>Gasto por Partido</h1>
+            <canvas id="myChart2" width="500px" height="500px"></canvas>            
+        </div>
+        <div id="teste" style="width: 600px;margin-left: 300px;">
+            <h1>Gastos CEAPS - 2019</h1>
+            <canvas id="myChart3" width="600px" height="600px"></canvas>            
+        </div>
+        <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'pie',
+            options: {
+                    legend: false,
+                },
+            data: {
+                labels: [
+                
+                    'ENERGISA',
+                
+                    'GILBERTO PISELO DO NASCIMENTO',
+                
+                    'OI MÓVEL S.A.',
+                
+                    'E NASCIMENTO AGÊNCIA DE PUBLICIDADE E MARKETING - ME',
+                
+                    'INFORMANAHORA',
+                
+                    'EURO INFO',
+                
+                    'COSTIN &amp; MARTINS LTDA ME',
+                
+                    'SS COMUNICAÇÃO VISUAL LTDA - ME',
+                
+                    'V. T. DE OLIVEIRA PRODUÇÕES E PUBLICIDADE EIRELI',
+                
+                    'CMP COMUNICAÇÃO E ASSESSORIA LTDA -ME',
+                
+                ],                
+                datasets: [{
+                    label: 'Valor Gasto',
+                    data: [
+                    
+                    '21610.52',
+                    
+                    '60000',
+                    
+                    '16554.33',
+                    
+                    '8000',
+                    
+                    '12000',
+                    
+                    '843.7',
+                    
+                    '24500',
+                    
+                    '825',
+                    
+                    '2000',
+                    
+                    '5000',
+                    
+                    ],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)'
+
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],   
+                    borderWidth: 1
+                }]
+            }
+        });
+        </script>
+        <script>
+            var ctx = document.getElementById('myChart2').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'pie',
+                options: {
+                    legend: false,
+                },
+                data: {
+                    labels: [
+                    
+                        'PDT',
+                    
+                        'CIDADANIA',
+                    
+                        'PODEMOS',
+                    
+                        'PSD',
+                    
+                        'PSDB',
+                    
+                        'DEM',
+                    
+                        'PP',
+                    
+                        'MDB',
+                    
+                        'REDE',
+                    
+                        'PROS',
+                    
+                        'PSL',
+                    
+                        'PT',
+                    
+                        'PL',
+                    
+                        'PSB',
+                    
+                        'REPUBLICANOS',
+                    
+                        'PSC',
+                    
+                    ],                
+                    datasets: [{
+                        label: 'Valor Gasto',
+                        data: [
+                        
+                        '1298.52',
+                        
+                        '5781.7',
+                        
+                        '2986.08',
+                        
+                        '8494.94',
+                        
+                        '2171.95',
+                        
+                        '7737.4',
+                        
+                        '2333.65',
+                        
+                        '3816.6',
+                        
+                        '6281.72',
+                        
+                        '1025.27',
+                        
+                        '7435.74',
+                        
+                        '7674.19',
+                        
+                        '910.52',
+                        
+                        '608.12',
+                        
+                        '1098.5',
+                        
+                        '663.74',
+                        
+                        ],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            
+                            'rgba(153, 102, 255, 0.2)'
+    
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(153, 102, 255, 1)'
+                        ],   
+                        borderWidth: 1
+                    }]
+                }
+            });
+        </script>
+        <script>
+            var ctx = document.getElementById('myChart3').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                options: {
+                    legend: false,
+                },
+                data: {
+                    labels: [
+                    
+                        '1',
+                    
+                        '2',
+                    
+                        '3',
+                    
+                        '4',
+                    
+                        '5',
+                    
+                        '6',
+                    
+                        '7',
+                    
+                        '8',
+                    
+                        '9',
+                    
+                        '10',
+                    
+                        '11',
+                    
+                    ],                
+                    datasets: [{
+                        label: 'Valor Gasto em R$',
+                        data: [
+                        
+                        '654619.52',
+                        
+                        '1716828.58',
+                        
+                        '1868875.79',
+                        
+                        '1992384.03',
+                        
+                        '2151460.03',
+                        
+                        '2144808.44',
+                        
+                        '1834425.43',
+                        
+                        '2167826.13',
+                        
+                        '2042095.91',
+                        
+                        '1737119.33',
+                        
+                        '187127.1',
+                        
+                        ],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            
+                            'rgba(153, 102, 255, 0.2)'
+    
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(153, 102, 255, 1)'
+                        ],   
+                        borderWidth: 1
+                    }]
+                }
+            });
+        </script>
+    </div>
+</div>
+</body>
+</html>
